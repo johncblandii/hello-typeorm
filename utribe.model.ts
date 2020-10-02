@@ -5,7 +5,7 @@ export interface BaseEntity {
 }
 
 export interface Message extends BaseEntity {
-  userId: string;
+  recipientId: string;
   data: string;
 }
 
