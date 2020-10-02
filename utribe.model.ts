@@ -1,12 +1,12 @@
 export interface BaseEntity {
-	id: string;
-	createdAt: string;
-	createdBy: string;
+  id: string;
+  createdAt: string;
+  createdBy: string;
 }
 
 export interface Message extends BaseEntity {
-	userId: string;
-	data: string;
+  userId: string;
+  data: string;
 }
 
 export interface Interest extends BaseEntity {
@@ -22,14 +22,14 @@ export interface Category extends BaseEntity {
 }
 
 export interface Media extends BaseEntity {
-	title: string;
-	description: string;
-	uri: string;
+  title: string;
+  description: string;
+  uri: string;
 }
 
 export interface Charity extends BaseEntity {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
   images: Array<Media>;
   videos: Array<Media>;
   members: Array<User>;
@@ -51,8 +51,8 @@ export interface Experience extends BaseEntity {
   maxSpectators?: number;
   maxParticipants?: number;
   thrivecartId?: string;
-	hidden?: boolean;
-	charity: Charity;
+  hidden?: boolean;
+  charity: Charity;
   images: Array<Media>;
   videos: Array<Media>;
   interests: Array<Interest>;
@@ -64,7 +64,6 @@ export interface Experience extends BaseEntity {
 }
 
 export interface Registration extends BaseEntity {
-	id: string;
   userId: string;
   experienceId: string;
   registrationId: string;
@@ -90,7 +89,7 @@ export interface User extends BaseEntity {
   referralId?: string;
   instagram?: string;
   showAttributes?: boolean;
-  isHero?: boolean;  
+  isHero?: boolean;
   images?: Array<Media>;
   registrations?: Array<Registration>;
   conversations?: Array<Message>;
